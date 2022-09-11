@@ -46,6 +46,25 @@ code {
         background-color: white;
       }
 
+      #avatar{
+        display:none;
+      }
+
+      label{
+        display:flex;
+        align-items: center;
+
+        img{
+          width:45px;
+          cursor:pointer;
+        }
+
+        p{
+          padding-left:15px;
+        }
+
+      }
+
       input{
         height: 40px;
         width: 350px;
@@ -64,6 +83,183 @@ code {
     p{
       color:white;
       font-size: 15px;
+    }
+  }
+}
+
+.home-container {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .home-section{
+    display: flex;
+    align-items: center;
+    width:80%;
+    height:80%;
+    background-color: #5a97e7;
+    border-radius: 25px;
+
+    .sidebar-container{
+      width:30%;
+      height: 100%;
+      border-right: 2px solid #1464cc67;
+      border-radius: 25px 0px 0px 25px;
+      .nav-container{
+        width:100%;
+        height:10%;
+        border-radius: 25px 0px 0px 0px;
+        display:flex;
+        justify-content: space-around;
+        background-color: #272727;
+
+        .logo{
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          width: 30%;
+          color: white;
+        }
+
+        .user-info{
+          width:60%;
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          padding-left:15px;
+          img{
+            width:30px;
+            height:30px;
+            border-radius: 500px;
+          }
+          p{
+            color: white;
+            font-weight: 500;
+            padding-left:10px;
+            font-size:16px;
+          }
+          button{
+            margin-left: 15px;
+            border:none;
+            background-color:#1464cc;
+            border-radius: 5px;
+            font-size:12px;
+            height:30px;
+            color:white;
+            width:60px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .search-container{
+        display:flex;
+        width: 100%;
+        height: 8%;
+        background-color: #272727;
+        input{
+          background: none;
+          border:none;
+          width: 100%;
+          color: white;
+          padding-left: 20px;
+          border-bottom: 1px solid #6b6b6b;
+          transition: 0.2s ease-out;
+          border-top: 1px solid #6b6b6b;
+          &::placeholder{
+            color:#ffffff80;
+          }
+          
+        }
+        input:focus{
+          outline: none;
+          background-color:#1464cc;
+          &::placeholder{
+            color:white;
+          }
+        }
+
+      }
+
+      .chats-container{
+        width:100%;
+        height: 82%;
+        background-color:#272727;
+        border-radius: 0px 0px 0px 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        color: white;
+        .individual-chat{
+          width:100%;
+          height:13%;
+          display:flex;
+          align-items: center;
+          justify-content: left;
+          .user-image{
+            width: 15%;
+            margin-left: 40px;
+            img{
+              width: 50px;
+              border-radius: 500px;
+            }
+          }
+
+          .user-info{
+            width: 85%;
+            margin-left: 10px;
+            span{
+              margin: 0;
+              padding: 0;
+              font-weight: bold;
+              font-size: 18px;
+              color:#5a97e7;
+            }
+            p{
+              margin:0;
+              font-size:14px;
+            }
+          }
+
+        }
+        .individual-chat:hover{
+          background-color: rgba(10, 10, 10, 0.452);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .chat-container{
+      width: 70%;
+      height: 100%;
+      display:flex;
+      flex-direction: column;
+
+      .chat-info{
+        background-color: #1464cc;
+        width: 100%;
+        height:10%;
+        display:flex;
+        align-items: center;
+        img{
+          margin-left: 20px;
+          width: 40px;
+          border-radius: 500px;
+        }
+        span{
+          margin-left: 10px;
+          color:white;
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+      .chat-section{
+        width:100%;
+        height:80%;
+      }
+
     }
   }
 }
