@@ -1,5 +1,6 @@
 import React from 'react'
 import Input from '../components/Input'
+import Messages from './Messages'
 const Chat = () => {
   return (
     <div className="chat-container">
@@ -7,9 +8,7 @@ const Chat = () => {
             <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=2000" alt="" />
             <span>UserName</span>
         </div>
-        <div className="chat-section">
-            Hello
-        </div>
+        <Messages />
         <Input />
     </div>
   )
